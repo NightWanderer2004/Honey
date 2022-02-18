@@ -28,10 +28,10 @@
          }
          & img {
             width: clamp(40px, 5.7vw, 80px);
-            margin: 25px 0;
+            margin: clamp(12px, 1.7vw, 25px) 0;
          }
          & button {
-            font-size: 30px;
+            font-size: clamp(20px, 2.1vw, 30px);
             border: none;
             background-color: transparent;
             color: #e5a611;
