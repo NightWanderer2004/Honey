@@ -21,6 +21,7 @@ buyBtns.forEach(el => {
                <div class="info">
                   <h3>Thanks you for order!</h3>
                   <img src="./emoji.png" alt="img" />
+                  <button class="closeBtn">Cancel</button>
                </div>
             </div>
          </div>
@@ -31,7 +32,7 @@ buyBtns.forEach(el => {
 })
 
 window.addEventListener('click', event => {
-   if (event.target.classList.contains('backdrop')) {
+   if (event.target.classList.contains('closeBtn')) {
       document.querySelector('.backdrop').style.top = '-100%'
       setTimeout(() => document.querySelector('.modal').remove(), 400)
       document.querySelector('body').classList.remove('noScroll')

@@ -9,7 +9,6 @@
       background-color: rgba(#000, 0.5);
       transition: top 0.3s ease-in-out;
       & .info {
-         pointer-events: none;
          z-index: 20;
          position: relative;
          top: calc(50% - clamp(140px, 20vw, 280px) / 2);
@@ -26,10 +25,16 @@
          text-align: center;
          & h3 {
             font-size: clamp(25px, 3vw, 43px);
-            margin-bottom: 25px;
          }
          & img {
             width: clamp(40px, 5.7vw, 80px);
+            margin: 25px 0;
+         }
+         & button {
+            font-size: 30px;
+            border: none;
+            background-color: transparent;
+            color: #e5a611;
          }
       }
    }
