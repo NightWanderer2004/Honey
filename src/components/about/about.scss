@@ -1,0 +1,80 @@
+.section {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding-top: 70px;
+   & .picture img {
+      width: clamp(510px, 57.8vw, 810px);
+      animation: fly 2.75s ease-in infinite;
+   }
+   & .tagline {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      & h3 {
+         font-size: clamp(35px, 3.2vw, 45px);
+         font-weight: 700;
+      }
+      & p {
+         font-size: clamp(18px, 1.5vw, 22px);
+         font-weight: 600;
+         margin: 45px 0;
+      }
+   }
+}
+@keyframes fly {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(6px);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}
+@media (max-width: 1080px) {
+   .section {
+      & .picture img {
+         width: clamp(300px, 47.2vw, 510px);
+      }
+      & .tagline {
+         & h3 {
+            font-size: clamp(25px, 3.5vw, 35px);
+         }
+         & p {
+            font-size: clamp(14px, 1.8vw, 18px);
+         }
+      }
+   }
+}
+@media (max-width: 768px) {
+   .section {
+      padding-top: 100px;
+      & .picture {
+         display: none;
+      }
+      & .tagline {
+         & h3 {
+            font-size: clamp(25px, 4.5vw, 35px);
+         }
+         & p {
+            margin: clamp(15px, 3.2vw, 25px) 0;
+            font-size: clamp(16px, 2.8vw, 22px);
+         }
+      }
+   }
+}
+@media (max-width: 576px) {
+   .section {
+      & .tagline {
+         & h3 {
+            font-size: clamp(35px, 8.6vw, 50px);
+         }
+         & p {
+            margin: clamp(15px, 3.2vw, 25px) 0;
+            font-size: clamp(20px, 5.2vw, 30px);
+         }
+      }
+   }
+}

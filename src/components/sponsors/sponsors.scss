@@ -1,0 +1,30 @@
+.sponsors {
+   padding: 0 20px;
+   margin-bottom: 120px;
+   & h3 {
+      font-size: clamp(32px, 3.2vw, 45px);
+      font-weight: 700;
+      margin-bottom: 50px;
+   }
+   & .shops {
+      align-items: center;
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: clamp(30px, 7.6vw, 110px);
+      & img {
+         width: clamp(95px, 60vw, 100%);
+      }
+   }
+}
+@media (max-width: 576px) {
+   .sponsors {
+      & h3 {
+         font-size: clamp(28px, 9.5vw, 55px);
+      }
+      & .shops {
+         grid-row-gap: 50px;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(2, 1fr);
+      }
+   }
+}

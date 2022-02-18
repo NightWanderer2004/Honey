@@ -1,0 +1,93 @@
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+*,
+:after,
+:before {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+*::selection {
+   background-color: rgba(#e5a611, 0.575);
+   color: #fff;
+}
+aside,
+footer,
+header,
+nav {
+   display: block;
+}
+body,
+html {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   scroll-behavior: smooth;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+button,
+input,
+textarea {
+   font-family: inherit;
+}
+input::-ms-clear {
+   display: none;
+}
+button {
+   cursor: pointer;
+}
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+a,
+a:visited {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: none;
+}
+ul li {
+   list-style: none;
+}
+img {
+   vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+body {
+   &.noScroll {
+      overflow-y: hidden;
+   }
+   font-family: Kodchasan;
+}
+.wrapper {
+   min-height: 100vh;
+   overflow: hidden;
+}
+.container {
+   max-width: 1440px;
+   padding: 0 20px;
+   margin: 0 auto;
+}
+
+@import './components/modal/modal.scss';
+@import './components/navbar/navbar.scss';
+@import './components/hero/hero.scss';
+@import './components/sponsors/sponsors.scss';
+@import './components/about/about.scss';
+@import './components/products/products.scss';
+@import './components/footer/footer.scss';
